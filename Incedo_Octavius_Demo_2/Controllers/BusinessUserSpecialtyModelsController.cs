@@ -19,7 +19,7 @@ namespace Incedo_Octavius_Demo_2.Controllers
     {
         private Incedo_Octavius_Demo_2_BU_Spec_Context db = new Incedo_Octavius_Demo_2_BU_Spec_Context();
         public string constr = ConfigurationManager.ConnectionStrings["Incedo_Octavius_Demo_2_BU_Spec_Context"].ConnectionString;
-
+        int pageSizeBU = 10;
         // GET: BusinessUserSpecialtyModels
         public ActionResult Index(int ? i)
         {
@@ -63,7 +63,7 @@ namespace Incedo_Octavius_Demo_2.Controllers
                 }
 
             }
-            return View(Spec_BU_List.ToPagedList(i??1,6));
+            return View(Spec_BU_List.ToPagedList(i??1, pageSizeBU));
         }
 
         // GET: BusinessUserSpecialtyModels/Details/5

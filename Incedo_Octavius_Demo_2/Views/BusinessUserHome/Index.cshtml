@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Business User Home Page";
+    ViewBag.Title = "Index";
 }
 
 <!DOCTYPE html>
@@ -7,35 +7,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+
+    <title>Index</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <!---
-        <div class="container-fluid text-center" style="color:black">
-
-            <div class="row container-fluid">
-                <div class="col-md-6 d-flex align-items-center justify-content-center" style="background-color:lightcyan; padding: 50px">
-                    <h2>
-                        @Html.ActionLink("Degree", "Index", "BusinessUserDegreeModels", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-danger btn-lg", @role = "button" })
-                    </h2>
-                </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-center" style="background-color: lightcyan; padding: 50px">
-                    <h2>
-                        @Html.ActionLink("Speciality", "Index", "BusinessUserSpecialtyModels", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-danger btn-lg", @role = "button" })
-                    </h2>
-                </div>
-            </div>
-
-        </div>
-        -->
     <div class="row mb-2">
         <div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -45,12 +23,6 @@
                         @Html.ActionLink("Degree", "Index", "BusinessUserDegreeModels", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-danger btn-lg", @role = "button" })
                     </h3>
 
-
-                    <!--
-                    <h3 class="mb-0">Medical Reps</h3>
-
-                    <span class="nav-link text-dark">@Html.ActionLink("Medical Reps", "Index", "KOL_Image")</span>
-                    -->
                     <div class="mb-1 text-muted"></div>
                     <p class="card-text mb-auto text-dark">The degrees of the business users are available here. The Degree Map along with degree master is present.You can edit and delete the respective degrees.</p>
 
@@ -86,21 +58,5 @@
             </div>
         </div>
     </div>
-   
-    
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    @*@{Html.RenderAction("Index", "BusinessUserDegreeModels"); }*@
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
 </body>
 </html>

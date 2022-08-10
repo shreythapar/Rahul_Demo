@@ -22,6 +22,7 @@ namespace Incedo_Octavius_Demo_2.Controllers
         private Incedo_Octavius_Demo_2_Rules_BU_Deg_Context db = new Incedo_Octavius_Demo_2_Rules_BU_Deg_Context();
         public string constr = ConfigurationManager.ConnectionStrings["Incedo_Octavius_Demo_2_Rules_BU_Deg_Context"].ConnectionString;
 
+        int PageSizeBU = 10;
         // GET: BusinessUserDegreeModels
         public ActionResult Index(int ? i)
         {
@@ -65,7 +66,7 @@ namespace Incedo_Octavius_Demo_2.Controllers
                 }
 
             }
-            return View(RuleDegBU_List.ToPagedList(i ??  1,6));
+            return View(RuleDegBU_List.ToPagedList(i ??  1,PageSizeBU));
             //return View(db.BusinessUserDegreeModels.ToList());
         }
 

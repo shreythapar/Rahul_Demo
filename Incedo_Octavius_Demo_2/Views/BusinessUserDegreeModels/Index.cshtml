@@ -5,8 +5,14 @@
 }
 @using PagedList.Mvc;
 @using PagedList;
-<h2>Degree Business Rules</h2>
 
+
+@{
+    Html.RenderPartial("_MapBU");
+}
+
+<h2>Degree Business Rules</h2>
+<br/>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>

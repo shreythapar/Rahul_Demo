@@ -11,6 +11,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+
     <title>Index</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -26,7 +27,7 @@
         </h2>
         <br />
     </div>
-    
+
     <div class="row">
         @foreach (var item in Model)
         {
@@ -42,11 +43,17 @@
             </div>
         }
     </div>
+    <div class="page-item" style="background-color: #fff; text-align: right; padding: 10px;">
+        @Html.PagedListPager(Model, i => Url.Action("Index", "KOL_Image", new { i }),
 
+        new PagedListRenderOptions
+        {
+            LiElementClasses = new string[] { "page-item" },
+        }
+        )
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 </body>
-
-@Html.PagedListPager(Model,i=>Url.Action("Index","KOL_Image",new {i,search=Request.QueryString["search"]}))
 
 </html>

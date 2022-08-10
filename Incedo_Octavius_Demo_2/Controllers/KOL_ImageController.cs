@@ -21,6 +21,8 @@ namespace Incedo_Octavius_Demo_2.Controllers
         List<ProfileStatusModel> profiles = new List<ProfileStatusModel>();
         List<KOL_Image> kolList = new List<KOL_Image>();
 
+        int PageSizeKOL = 12;
+
         int chosenProfileID;
         List<int> KOL_Count = new List<int>();
 
@@ -76,7 +78,7 @@ namespace Incedo_Octavius_Demo_2.Controllers
         }
 
         // GET: KOL_Image
-        public ActionResult Index(int ? i)
+        public ActionResult Index(int? i)
         {
             Console.WriteLine("Inside Index GEt");
             int profile = 2;
@@ -130,13 +132,13 @@ namespace Incedo_Octavius_Demo_2.Controllers
             //profiles = ViewBag.Profiles;
             //ViewBag.Profile = profiles[chosenProfileID].ProfileStatus;
             kolList = kolNameImageList;
-            return View(kolNameImageList);
+            return View(kolNameImageList.ToPagedList(i ?? 1, PageSizeKOL));
         }
 
         
 
         [HttpPost]
-        public ActionResult Index(int profile)
+        public ActionResult Index(int profile, int? i)
         {
             Console.WriteLine("Inside index post");
             GetProfiles();
@@ -153,17 +155,17 @@ namespace Incedo_Octavius_Demo_2.Controllers
             //profiles = ViewBag.Profiles;
             //ViewBag.Profile = profiles[chosenProfileID].ProfileStatus;
             //return View(kolNameImageList.Where(x => x.First_Name.StartsWith(search) || search == null).ToList());
-            return View(kolList);
+            return View(kolList.ToPagedList(i ?? 1, PageSizeKOL));
         }
 
         [HttpPost]
-        public ActionResult Search(string search)
+        public ActionResult Search(string search, int? i)
         {
             SetProfileId(Convert.ToInt32(Session["profileID"]));
             GetKOLNameImage(chosenProfileID);
             List<KOL_Image> matchKOLs = new List<KOL_Image>();
             matchKOLs = kolList.Where(x => x.First_Name.ToLower().StartsWith(search.ToLower()) || search == null).ToList();
-            return View(matchKOLs);
+            return View(matchKOLs.ToPagedList(i ?? 1, PageSizeKOL));
         }
          
 

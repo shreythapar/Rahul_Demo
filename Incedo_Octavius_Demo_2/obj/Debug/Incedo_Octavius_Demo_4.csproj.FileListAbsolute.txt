@@ -581,3 +581,7 @@ C:\Users\shubham.priyadarshi\OneDrive - Incedo Technology Solutions Ltd\Desktop\
 C:\Users\shubham.priyadarshi\OneDrive - Incedo Technology Solutions Ltd\Desktop\Octavius_v5\Incedo_Octavius_Demo_2\bin\PagedList.Mvc.dll
 C:\Users\shubham.priyadarshi\OneDrive - Incedo Technology Solutions Ltd\Desktop\Octavius_v5\Incedo_Octavius_Demo_2\bin\PagedList.xml
 C:\Users\shubham.priyadarshi\OneDrive - Incedo Technology Solutions Ltd\Desktop\Octavius_v5\Incedo_Octavius_Demo_2\bin\PagedList.Mvc.xml
+C:\Users\sushil.kumar2\Documents\Capstone Project\Octavious Project\Octavius Github\Octavius_v5\Incedo_Octavius_Demo_2\bin\PagedList.dll
+C:\Users\sushil.kumar2\Documents\Capstone Project\Octavious Project\Octavius Github\Octavius_v5\Incedo_Octavius_Demo_2\bin\PagedList.Mvc.dll
+C:\Users\sushil.kumar2\Documents\Capstone Project\Octavious Project\Octavius Github\Octavius_v5\Incedo_Octavius_Demo_2\bin\PagedList.xml
+C:\Users\sushil.kumar2\Documents\Capstone Project\Octavious Project\Octavius Github\Octavius_v5\Incedo_Octavius_Demo_2\bin\PagedList.Mvc.xml

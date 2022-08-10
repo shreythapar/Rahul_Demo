@@ -393,6 +393,7 @@
     <Content Include="Content\img\pic2.jpg" />
     <Content Include="Content\img\pic3.jpg" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -451,7 +452,7 @@
     <Content Include="Views\KOL\Edit.cshtml" />
     <Content Include="Views\KOL\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index3.cshtml" />
     <Content Include="Views\Home\Privacy.cshtml" />
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\KOL_DATA\Create.cshtml" />
@@ -483,7 +484,6 @@
     <Content Include="Views\KOL_Image\Index.cshtml" />
     <Content Include="Views\KOL_Details\Index.cshtml" />
     <Content Include="Views\KOL_Details\Details.cshtml" />
-    <Content Include="Views\BusinessUserHome\Index.cshtml" />
     <Content Include="Views\BusinessUserDegreeModels\Create.cshtml" />
     <Content Include="Views\BusinessUserDegreeModels\Delete.cshtml" />
     <Content Include="Views\BusinessUserDegreeModels\Details.cshtml" />
@@ -497,6 +497,9 @@
     <Content Include="Views\ProfileStatus\Index.cshtml" />
     <Content Include="Views\KOL_Image\ProfileIndex.cshtml" />
     <Content Include="Views\KOL_Image\Search.cshtml" />
+    <Content Include="Views\BusinessUserHome\Index.cshtml" />
+    <Content Include="Views\Shared\_MapBU.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

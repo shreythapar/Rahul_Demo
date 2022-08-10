@@ -6,7 +6,14 @@
 @using PagedList.Mvc;
 @using PagedList;
 
-<h2>Index</h2>
+
+
+@{
+    Html.RenderPartial("_MapBU");
+}
+
+<h2>Speciality Business Rules</h2>
+<br/>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -22,21 +29,22 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SpecialtyMap)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SpecialtyMaster)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.MapID }) |
-            @*@Html.ActionLink("Details", "Details", new { id=item.MapID }) |*@
-            @Html.ActionLink("Delete", "Delete", new { id = item.MapID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialtyMap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialtyMaster)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MapID }) |
+                @*@Html.ActionLink("Details", "Details", new { id=item.MapID }) |*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.MapID })
+            </td>
+        </tr>
+    }
 
 </table>
-@Html.PagedListPager(Model, i => Url.Action("Index", "BusinessUserSpecialtyModels", new {i,search=Request.QueryString["search"]}))
+@Html.PagedListPager(Model, i => Url.Action("Index", "BusinessUserSpecialtyModels", new { i, search = Request.QueryString["search"] }))
